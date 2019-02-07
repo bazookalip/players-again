@@ -7,7 +7,8 @@ function onReady(){
     $('#addPlayerButton').on('click', function (){
         let player = $('#playerName').val();
         $('#ulNames').append(`
-            <li>${player}</li>
+            <ul id="ulNames"></ul>
+                <li>${player}</li>
         `)
         $('#playerName').val('');
     });
