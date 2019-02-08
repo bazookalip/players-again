@@ -7,15 +7,46 @@
     <script src="jquery.js"></script>
     <script src="client.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Players Again!</title>
+    <title>Players!</title>
 </head>
 <body>
-    <h1>Players</h1>
+    <h2>Players</h2>
     
     <input type="text" placeholder="Name" id="playerName">
     <button id="addPlayerButton">Submit</button>
     
     <ul id="ulNames"></ul>
+
+    <h2>Games</h2>
+    <div>
+        Player: <select class="playerDropdown" id="playerName"></select>
+        versus
+        Opponent: <select class="playerDropdown" id="opponentName"></select>
+    </div>
+    <div>
+        <label>
+            Player Score
+            <input type="number" name="playerScore" id="playerScore" />
+        </label>
+        <label>
+            Opponent Score
+            <input type="number" name="opponentScore" id="opponentScore" />
+        </label>
+    </div>
+    <button type="button" id="addGameButton">Add Game</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Player Score</th>
+                <th>Opponent Name</th>
+                <th>Opponent Score</th>
+                <th>Winner</th>
+            </tr>
+        </thead>
+        <tbody id="gameTable">
+        </tbody>
+    </table>
 
 </body>
 </html>
