@@ -1,10 +1,14 @@
 body {
-    background: lightcyan;
+    background: rgb(137, 148, 148);
     font-family: Arial, Helvetica, sans-serif;
+     background-image: url("knight.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 ul {
-    background: rgba(54, 54, 182, 0.342);
+    background: rgb(25, 25, 44);
     color: white;
     border-radius: 10px;
     list-style-type: none;
@@ -17,6 +21,6 @@ ul {
 }
 
 #table {
-    background: rgb(4, 4, 105);
+    background: rgb(31, 31, 41);
     color: white;
 }
