@@ -31,6 +31,17 @@ function getPlayers() {
             $('#ulNames').append(`
              <li>${players.name}</li>  
         `)
+
         });
+        updatePlayerList(response);
     })
+}
+
+function updatePlayerList(players) {
+    $('.playerDropdown').empty();
+    $('.playerList').empty();
+    players.forEach(player => {
+        $('.playerDropdown').append(`<option value="${player.name}">${player.name}</option>`);
+        $('.playerList').append(`<li>${player.name}</li>`);
+    });
 }
