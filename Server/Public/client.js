@@ -11,11 +11,14 @@ function onReady(){
     }).then(function(response) {
         console.log(response);
         $('#ulNames').empty();
-        response.forEach((playerObject) => {
+        for (let i = 0; i < response.length; i++) {
+            let players = response[i];
             $('#ulNames').append(`
-             <li>${playerObject}</li>  
-        `)
-        });   
+            
+            <li>${players.name}</li>      
+            `); 
+        }
+           
     })
     
     $('#addPlayerButton').on('click', addClick);
@@ -23,7 +26,6 @@ function onReady(){
 
 
 function addClick(){
-    // let player = $('#playerName').val();
     $.ajax({
         url: '/new',
         method: 'POST',
@@ -36,9 +38,9 @@ function addClick(){
             method: 'GET'
         }).then(function (response) {
             console.log(response);
-            response.forEach((playerObject) => {
+            response.forEach((players) => {
                 $('#ulNames').append(`
-             <li>${playerObject}</li>  
+             <li>${players.name}</li>  
         `)
             });
         })

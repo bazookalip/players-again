@@ -10,7 +10,13 @@ app.use(express.static('server/public'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-let players = ['Larry', 'Joe', 'Alan']
+let players = [
+    {name: 'Larry', 
+    },   
+    {name: 'Joe',
+    },
+    {name: 'Alan',
+    }];
 
 app.get('/players', (req, res) =>{
     res.send(players);
