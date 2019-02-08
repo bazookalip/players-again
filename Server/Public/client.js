@@ -30,7 +30,7 @@ function addClick(){
         url: '/new',
         method: 'POST',
         data: {
-            player: $('#playerName').val()
+            name: $('#playerName').val()
         }
     }).then(function(){
         $.ajax({
@@ -38,6 +38,8 @@ function addClick(){
             method: 'GET'
         }).then(function (response) {
             console.log(response);
+            $('#ulNames').empty();
+
             response.forEach((players) => {
                 $('#ulNames').append(`
              <li>${players.name}</li>  
